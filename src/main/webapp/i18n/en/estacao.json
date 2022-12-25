@@ -1,0 +1,40 @@
+{
+  "exossLivesiteApp": {
+    "estacao": {
+      "home": {
+        "title": "Estacaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Estacao",
+        "createOrEditLabel": "Create or edit a Estacao",
+        "notFound": "No Estacaos found"
+      },
+      "created": "A new Estacao is created with identifier {{ param }}",
+      "updated": "A Estacao is updated with identifier {{ param }}",
+      "deleted": "A Estacao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Estacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Estacao"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "associado": "Associado",
+      "email": "Email",
+      "telefone": "Telefone",
+      "cidade": "Cidade",
+      "estado": "Estado",
+      "lente": "Lente",
+      "camera": "Camera",
+      "fov": "Fov",
+      "kml": "Kml",
+      "lat": "Lat",
+      "lng": "Lng",
+      "site": "Site",
+      "ativa": "Ativa",
+      "pareamento": "Pareamento",
+      "user": "User",
+      "captura": "Captura"
+    }
+  }
+}

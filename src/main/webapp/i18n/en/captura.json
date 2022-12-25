@@ -1,0 +1,29 @@
+{
+  "exossLivesiteApp": {
+    "captura": {
+      "home": {
+        "title": "Capturas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Captura",
+        "createOrEditLabel": "Create or edit a Captura",
+        "notFound": "No Capturas found"
+      },
+      "created": "A new Captura is created with identifier {{ param }}",
+      "updated": "A Captura is updated with identifier {{ param }}",
+      "deleted": "A Captura is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Captura {{ id }}?"
+      },
+      "detail": {
+        "title": "Captura"
+      },
+      "id": "ID",
+      "imagem": "Imagem",
+      "data": "Data",
+      "descricao": "Descricao",
+      "status": "Status",
+      "video": "Video",
+      "estacao": "Estacao"
+    }
+  }
+}
