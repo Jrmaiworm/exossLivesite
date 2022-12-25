@@ -30,7 +30,7 @@ export const Estacao = () => {
   return (
     <div>
       <h2 id="estacao-heading" data-cy="EstacaoHeading">
-        <Translate contentKey="exossLivesiteApp.estacao.home.title">Estacaos</Translate>
+        <Translate contentKey="exossLivesiteApp.estacao.home.title">Estações</Translate>
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
@@ -155,7 +155,7 @@ export const Estacao = () => {
         ) : (
           !loading && (
             <div className="alert alert-warning">
-              <Translate contentKey="exossLivesiteApp.estacao.home.notFound">No Estacaos found</Translate>
+              <Translate contentKey="exossLivesiteApp.estacao.home.notFound">No Estações found</Translate>
             </div>
           )
         )}
