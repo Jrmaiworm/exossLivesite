@@ -89,7 +89,7 @@ public class SecurityConfiguration {
             .antMatchers(HttpMethod.POST"/api/**").authenticated()
             .antMatchers(HttpMethod.PUT"/api/**").authenticated()
             .antMatchers(HttpMethod.DELETE"/api/**").authenticated()
-              .antMatchers("/api/**").authenticated()
+            .antMatchers("/api/**").authenticated()
             .antMatchers("/management/health").permitAll()
             .antMatchers("/management/health/**").permitAll()
             .antMatchers("/management/info").permitAll()
