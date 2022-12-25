@@ -2,13 +2,13 @@
   "exossLivesiteApp": {
     "estacao": {
       "home": {
-        "title": "Estacaos",
+        "title": "Estações",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Estacao",
+        "createLabel": "Cadastrar Estacao",
         "createOrEditLabel": "Criar ou editar Estacao",
         "notFound": "Nenhum Estacao encontrado"
       },
-      "created": "Um novo Estacao foi criado com o identificador {{ param }}",
+      "created": "Uma nova Estacao foi criado com o identificador {{ param }}",
       "updated": "Um Estacao foi atualizado com o identificador {{ param }}",
       "deleted": "Um Estacao foi excluído com o identificador {{ param }}",
       "delete": {
