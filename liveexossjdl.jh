@@ -25,7 +25,9 @@ imagem ImageBlob,
 data Instant,
 descricao String,
 status Boolean,
-video String
+video String,
+rating  Double,
+orbit Bollean
 
 
 }
