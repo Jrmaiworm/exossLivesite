@@ -23,6 +23,8 @@
       "descricao": "Descricao",
       "status": "Status",
       "video": "Video",
+      "rating": "Rating",
+      "orbit": "Orbit",
       "estacao": "Estacao"
     }
   }

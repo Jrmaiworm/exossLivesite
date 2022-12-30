@@ -139,6 +139,12 @@ public class CapturaResource {
                 if (captura.getVideo() != null) {
                     existingCaptura.setVideo(captura.getVideo());
                 }
+                if (captura.getRating() != null) {
+                    existingCaptura.setRating(captura.getRating());
+                }
+                if (captura.getOrbit() != null) {
+                    existingCaptura.setOrbit(captura.getOrbit());
+                }
 
                 return existingCaptura;
             })

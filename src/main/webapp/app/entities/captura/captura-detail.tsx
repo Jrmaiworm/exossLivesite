@@ -76,6 +76,18 @@ export const CapturaDetail = () => {
           </dt>
           <dd>{capturaEntity.video}</dd>
           <dt>
+            <span id="rating">
+              <Translate contentKey="exossLivesiteApp.captura.rating">Rating</Translate>
+            </span>
+          </dt>
+          <dd>{capturaEntity.rating}</dd>
+          <dt>
+            <span id="orbit">
+              <Translate contentKey="exossLivesiteApp.captura.orbit">Orbit</Translate>
+            </span>
+          </dt>
+          <dd>{capturaEntity.orbit ? 'true' : 'false'}</dd>
+          <dt>
             <Translate contentKey="exossLivesiteApp.captura.estacao">Estacao</Translate>
           </dt>
           <dd>{capturaEntity.estacao ? capturaEntity.estacao.id : ''}</dd>

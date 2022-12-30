@@ -27,7 +27,7 @@ descricao String,
 status Boolean,
 video String,
 rating  Double,
-orbit Bollean
+orbit Boolean
 
 
 }

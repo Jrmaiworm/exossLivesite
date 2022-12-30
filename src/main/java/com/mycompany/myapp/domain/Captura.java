@@ -43,6 +43,12 @@ public class Captura implements Serializable {
     @Column(name = "video")
     private String video;
 
+    @Column(name = "rating")
+    private Double rating;
+
+    @Column(name = "orbit")
+    private Boolean orbit;
+
     @ManyToOne
     @JsonIgnoreProperties(value = { "user", "capturas" }, allowSetters = true)
     private Estacao estacao;
@@ -140,6 +146,32 @@ public class Captura implements Serializable {
         this.video = video;
     }
 
+    public Double getRating() {
+        return this.rating;
+    }
+
+    public Captura rating(Double rating) {
+        this.setRating(rating);
+        return this;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
+    }
+
+    public Boolean getOrbit() {
+        return this.orbit;
+    }
+
+    public Captura orbit(Boolean orbit) {
+        this.setOrbit(orbit);
+        return this;
+    }
+
+    public void setOrbit(Boolean orbit) {
+        this.orbit = orbit;
+    }
+
     public Estacao getEstacao() {
         return this.estacao;
     }
@@ -183,6 +215,8 @@ public class Captura implements Serializable {
             ", descricao='" + getDescricao() + "'" +
             ", status='" + getStatus() + "'" +
             ", video='" + getVideo() + "'" +
+            ", rating=" + getRating() +
+            ", orbit='" + getOrbit() + "'" +
             "}";
     }
 }

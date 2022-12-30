@@ -49,6 +49,12 @@ class CapturaResourceIT {
     private static final String DEFAULT_VIDEO = "AAAAAAAAAA";
     private static final String UPDATED_VIDEO = "BBBBBBBBBB";
 
+    private static final Double DEFAULT_RATING = 1D;
+    private static final Double UPDATED_RATING = 2D;
+
+    private static final Boolean DEFAULT_ORBIT = false;
+    private static final Boolean UPDATED_ORBIT = true;
+
     private static final String ENTITY_API_URL = "/api/capturas";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -79,7 +85,9 @@ class CapturaResourceIT {
             .data(DEFAULT_DATA)
             .descricao(DEFAULT_DESCRICAO)
             .status(DEFAULT_STATUS)
-            .video(DEFAULT_VIDEO);
+            .video(DEFAULT_VIDEO)
+            .rating(DEFAULT_RATING)
+            .orbit(DEFAULT_ORBIT);
         return captura;
     }
 
@@ -96,7 +104,9 @@ class CapturaResourceIT {
             .data(UPDATED_DATA)
             .descricao(UPDATED_DESCRICAO)
             .status(UPDATED_STATUS)
-            .video(UPDATED_VIDEO);
+            .video(UPDATED_VIDEO)
+            .rating(UPDATED_RATING)
+            .orbit(UPDATED_ORBIT);
         return captura;
     }
 
@@ -124,6 +134,8 @@ class CapturaResourceIT {
         assertThat(testCaptura.getDescricao()).isEqualTo(DEFAULT_DESCRICAO);
         assertThat(testCaptura.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testCaptura.getVideo()).isEqualTo(DEFAULT_VIDEO);
+        assertThat(testCaptura.getRating()).isEqualTo(DEFAULT_RATING);
+        assertThat(testCaptura.getOrbit()).isEqualTo(DEFAULT_ORBIT);
     }
 
     @Test
@@ -161,7 +173,9 @@ class CapturaResourceIT {
             .andExpect(jsonPath("$.[*].data").value(hasItem(DEFAULT_DATA.toString())))
             .andExpect(jsonPath("$.[*].descricao").value(hasItem(DEFAULT_DESCRICAO)))
             .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.booleanValue())))
-            .andExpect(jsonPath("$.[*].video").value(hasItem(DEFAULT_VIDEO)));
+            .andExpect(jsonPath("$.[*].video").value(hasItem(DEFAULT_VIDEO)))
+            .andExpect(jsonPath("$.[*].rating").value(hasItem(DEFAULT_RATING.doubleValue())))
+            .andExpect(jsonPath("$.[*].orbit").value(hasItem(DEFAULT_ORBIT.booleanValue())));
     }
 
     @Test
@@ -181,7 +195,9 @@ class CapturaResourceIT {
             .andExpect(jsonPath("$.data").value(DEFAULT_DATA.toString()))
             .andExpect(jsonPath("$.descricao").value(DEFAULT_DESCRICAO))
             .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.booleanValue()))
-            .andExpect(jsonPath("$.video").value(DEFAULT_VIDEO));
+            .andExpect(jsonPath("$.video").value(DEFAULT_VIDEO))
+            .andExpect(jsonPath("$.rating").value(DEFAULT_RATING.doubleValue()))
+            .andExpect(jsonPath("$.orbit").value(DEFAULT_ORBIT.booleanValue()));
     }
 
     @Test
@@ -209,7 +225,9 @@ class CapturaResourceIT {
             .data(UPDATED_DATA)
             .descricao(UPDATED_DESCRICAO)
             .status(UPDATED_STATUS)
-            .video(UPDATED_VIDEO);
+            .video(UPDATED_VIDEO)
+            .rating(UPDATED_RATING)
+            .orbit(UPDATED_ORBIT);
 
         restCapturaMockMvc
             .perform(
@@ -229,6 +247,8 @@ class CapturaResourceIT {
         assertThat(testCaptura.getDescricao()).isEqualTo(UPDATED_DESCRICAO);
         assertThat(testCaptura.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testCaptura.getVideo()).isEqualTo(UPDATED_VIDEO);
+        assertThat(testCaptura.getRating()).isEqualTo(UPDATED_RATING);
+        assertThat(testCaptura.getOrbit()).isEqualTo(UPDATED_ORBIT);
     }
 
     @Test
@@ -299,7 +319,7 @@ class CapturaResourceIT {
         Captura partialUpdatedCaptura = new Captura();
         partialUpdatedCaptura.setId(captura.getId());
 
-        partialUpdatedCaptura.video(UPDATED_VIDEO);
+        partialUpdatedCaptura.video(UPDATED_VIDEO).rating(UPDATED_RATING);
 
         restCapturaMockMvc
             .perform(
@@ -319,6 +339,8 @@ class CapturaResourceIT {
         assertThat(testCaptura.getDescricao()).isEqualTo(DEFAULT_DESCRICAO);
         assertThat(testCaptura.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testCaptura.getVideo()).isEqualTo(UPDATED_VIDEO);
+        assertThat(testCaptura.getRating()).isEqualTo(UPDATED_RATING);
+        assertThat(testCaptura.getOrbit()).isEqualTo(DEFAULT_ORBIT);
     }
 
     @Test
@@ -339,7 +361,9 @@ class CapturaResourceIT {
             .data(UPDATED_DATA)
             .descricao(UPDATED_DESCRICAO)
             .status(UPDATED_STATUS)
-            .video(UPDATED_VIDEO);
+            .video(UPDATED_VIDEO)
+            .rating(UPDATED_RATING)
+            .orbit(UPDATED_ORBIT);
 
         restCapturaMockMvc
             .perform(
@@ -359,6 +383,8 @@ class CapturaResourceIT {
         assertThat(testCaptura.getDescricao()).isEqualTo(UPDATED_DESCRICAO);
         assertThat(testCaptura.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testCaptura.getVideo()).isEqualTo(UPDATED_VIDEO);
+        assertThat(testCaptura.getRating()).isEqualTo(UPDATED_RATING);
+        assertThat(testCaptura.getOrbit()).isEqualTo(UPDATED_ORBIT);
     }
 
     @Test

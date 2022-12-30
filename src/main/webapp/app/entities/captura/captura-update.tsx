@@ -138,6 +138,21 @@ export const CapturaUpdate = () => {
                 type="text"
               />
               <ValidatedField
+                label={translate('exossLivesiteApp.captura.rating')}
+                id="captura-rating"
+                name="rating"
+                data-cy="rating"
+                type="text"
+              />
+              <ValidatedField
+                label={translate('exossLivesiteApp.captura.orbit')}
+                id="captura-orbit"
+                name="orbit"
+                data-cy="orbit"
+                check
+                type="checkbox"
+              />
+              <ValidatedField
                 id="captura-estacao"
                 name="estacao"
                 data-cy="estacao"

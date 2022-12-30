@@ -67,6 +67,12 @@ export const Captura = () => {
                   <Translate contentKey="exossLivesiteApp.captura.video">Video</Translate>
                 </th>
                 <th>
+                  <Translate contentKey="exossLivesiteApp.captura.rating">Rating</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="exossLivesiteApp.captura.orbit">Orbit</Translate>
+                </th>
+                <th>
                   <Translate contentKey="exossLivesiteApp.captura.estacao">Estacao</Translate>
                 </th>
                 <th />
@@ -99,6 +105,8 @@ export const Captura = () => {
                   <td>{captura.descricao}</td>
                   <td>{captura.status ? 'true' : 'false'}</td>
                   <td>{captura.video}</td>
+                  <td>{captura.rating}</td>
+                  <td>{captura.orbit ? 'true' : 'false'}</td>
                   <td>{captura.estacao ? <Link to={`/estacao/${captura.estacao.id}`}>{captura.estacao.id}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

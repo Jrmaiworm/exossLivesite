@@ -9,9 +9,12 @@ export interface ICaptura {
   descricao?: string | null;
   status?: boolean | null;
   video?: string | null;
+  rating?: number | null;
+  orbit?: boolean | null;
   estacao?: IEstacao | null;
 }
 
 export const defaultValue: Readonly<ICaptura> = {
   status: false,
+  orbit: false,
 };
